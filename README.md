@@ -49,7 +49,7 @@ mv easing-sass-function/src/_easing-sass-function.scss <your project>/<scss dirc
 .line {
   transiton-property: transform;
   transiton-duration: 0.125s
-  transiton-timing-function: <mark>ease(easeInOutBack)</mark>
+  transiton-timing-function: ease(easeInOutBack)
 }
 ```
 
