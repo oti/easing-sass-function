@@ -5,7 +5,7 @@ For using [easings.net](http://easings.net/) with Sass function.
 
 ## Overview
 
-cubic-bezier collection by data-map and sass-function.
+cubic-bezier collection with data-map and sass-function.
 
 ```Sass
 $ease-map: (
