@@ -22,6 +22,10 @@ $ease-map: (
 }
 ```
 
+## Visual Sample
+
+https://oti.github.io/easing-sass-function/test/
+
 ## Usage
 
 1. git clone and move to your project.
