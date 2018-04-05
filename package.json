@@ -1,0 +1,29 @@
+{
+  "name": "easing-sass-function",
+  "version": "1.0.0",
+  "description": "sass function of custom easing",
+  "main": "index.html",
+  "dependencies": {
+    "node-sass": "^4.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node-sass src/test.scss test/test.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oti/easing-sass-function.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "easing",
+    "function"
+  ],
+  "author": "oti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oti/easing-sass-function/issues"
+  },
+  "homepage": "https://github.com/oti/easing-sass-function#readme"
+}
