@@ -57,4 +57,4 @@ Argument of `ease()` is easing name. there are key of `$ease-map()`.
 
 ## LICENSE
 
-[MIT.](LICENSE.md)
+[MIT license Copyright (c) 2018 oti](LICENSE.md)
