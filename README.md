@@ -28,6 +28,8 @@ https://oti.github.io/easing-sass-function/test/
 
 ## Usage
 
+### from git
+
 1. git clone and move to your project.
 
 ```shell
@@ -53,7 +55,31 @@ mv easing-sass-function/src/_easing-sass-function.scss <your project>/<scss dirc
 }
 ```
 
-Argument of `ease()` is easing name. there are key of `$ease-map()`.
+### from npm
+
+1. npm insatall.
+
+```shell
+npm i easing-sass-function
+```
+
+2. `@import` in your .scss file.
+
+```Sass
+// Example
+@import '../(to project root)/node_modules/easing-sass-function/src/easing-sass-function';
+```
+
+3. write `ease()` sass function and argument in value of transition-timing-function.
+
+```Sass
+// Example
+.line {
+  transiton-property: transform;
+  transiton-duration: 0.125s
+  transiton-timing-function: ease(easeInOutBack)
+}
+```
 
 ## LICENSE
 
