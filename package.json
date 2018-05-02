@@ -1,10 +1,10 @@
 {
   "name": "easing-sass-function",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "sass function of custom easing",
   "main": "index.html",
   "dependencies": {
-    "node-sass": "^4.8.3"
+    "node-sass": "^4.9.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -16,9 +16,12 @@
   },
   "keywords": [
     "css",
-    "scss",
+    "transition",
+    "cubic-bezier",
     "easing",
-    "function"
+    "scss",
+    "sass var",
+    "sass function"
   ],
   "author": "oti",
   "license": "MIT",

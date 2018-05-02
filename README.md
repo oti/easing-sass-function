@@ -8,6 +8,7 @@ For using [easings.net](http://easings.net/) with Sass function.
 cubic-bezier collection with data-map and sass-function.
 
 ```Sass
+// _easing-var.scss
 $ease-map: (
   easeInSine:     cubic-bezier(0.47, 0, 0.745, 0.715),
   easeOutSine:    cubic-bezier(0.39, 0.575, 0.565, 1),
@@ -15,8 +16,10 @@ $ease-map: (
   ...
   ...
 );
+```
 
-
+```Sass
+// _easing-var.scss
 @function ease($name) {
   @return map-get($ease-map, $name);
 }
@@ -34,14 +37,16 @@ https://oti.github.io/easing-sass-function/test/
 
 ```shell
 git clone git@github.com:oti/easing-sass-function.git
-mv easing-sass-function/src/_easing-sass-function.scss <your project>/<scss dirctory>
+mv easing-sass-function/src/_easing-var.scss <your project>/<scss dirctory>
+mv easing-sass-function/src/_easing-function.scss <your project>/<scss dirctory>
 ```
 
 2. `@import` in your .scss file.
 
 ```Sass
 // Example
-@import '<your scss partial file directory>/easing-sass-function';
+@import '<your scss partial file directory>/easing-var';
+@import '<your scss partial file directory>/easing-function';
 ```
 
 3. write `ease()` sass function and argument in value of transition-timing-function.
@@ -67,7 +72,8 @@ npm i easing-sass-function
 
 ```Sass
 // Example
-@import '../(to project root)/node_modules/easing-sass-function/src/easing-sass-function';
+@import '../(to project root)/node_modules/easing-sass-function/src/easing-var';
+@import '../(to project root)/node_modules/easing-sass-function/src/easing-function';
 ```
 
 3. write `ease()` sass function and argument in value of transition-timing-function.
@@ -83,4 +89,4 @@ npm i easing-sass-function
 
 ## LICENSE
 
-[MIT license Copyright (c) 2018 oti](LICENSE.md)
+[MIT license Copyright (c) 2018 oti](LICENSE.txt)
