@@ -1,6 +1,6 @@
 {
   "name": "easing-sass-function",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "sass function of custom easing",
   "files": [
     "_index.scss",
