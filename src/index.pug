@@ -35,19 +35,19 @@ html(lang="en")
       svg.Space.-sm(viewBox="0 0 1 1", aria-hidden="true")
         rect(width="1", height="1", fill="none")
 
-      form.Switcher
-        .Switcher__item
-          label(for="Duration").Switcher__label duration:
-          input.Switcher__input-text#Duration(type="number", name="duration", step="0.25", value="0.75")
-          span.Switcher__suffix s
-        .Switcher__item
-          input#Bulk(type="checkbox", name="bulk", value="1", checked)
-          label(for="Bulk").Switcher__label bulk animation
+      .Controller
+        .Controller__item
+          label(for="Duration").Controller__label duration:
+          input.Controller__input-text#Duration(type="number", name="duration", min="100", step="10", value="500")
+          span.Controller__suffix ms.
+        .Controller__item
+          input#Bulk(type="checkbox", name="bulk", checked)
+          label(for="Bulk").Controller__label bulk animation
 
       svg.Space.-sm(viewBox="0 0 1 1", aria-hidden="true")
         rect(width="1", height="1", fill="none")
 
-      ul.List
+      ul.List.is-bulk
         li.List__item.is-easeInSine
           span easeInSine
         li.List__item.is-easeOutSine
