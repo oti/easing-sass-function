@@ -1,125 +1,260 @@
 doctype html
 html(lang="en")
   head
-    meta(charset="UTF-8")
+    meta(charset="utf-8")
     title Easing Sass Function
-    link(rel="stylesheet", href="index.scss")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(
+      name="description",
+      content="You can get easing sass function"
+    )
+    meta(name="keywords", content="easing,sass,scss,function,css")
+    link(
+      rel="stylesheet",
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Fira+Code&display=swap"
+    )
+    link(rel="stylesheet", href="style/style.scss")
+    link(rel="canonical", href="https://easing-sass-function.dskd.jp")
+
   body
-    input#d1(hidden, type="radio", name="duration", checked)
-    input#d2(hidden, type="radio", name="duration")
-    input#d3(hidden, type="radio", name="duration")
-    header.header
-      h1 Easing Sass Function
-      a(href="https://github.com/oti/easing-sass-function") https://github.com/oti/easing-sass-function
-    main.main
-      h2 Visual Sample
-      .duration-select
-        em.duration-select__title You can change `transition-duration`
-        ul.duration-select__list(role="presentation")
-          li.duration-select__item(role="button")
-            label.duration-select__button(for="d1") 0.5s
-          li.duration-select__item(role="button")
-            label.duration-select__button(for="d2") 1s
-          li.duration-select__item(role="button")
-            label.duration-select__button(for="d3") 3s
-      .test-container
-        div.test-container__item
-          h3.test-container__title easeInSine
-          .box
-            .line.is-easeInSine
-        div.test-container__item
-          h3.test-container__title easeOutSine
-          .box
-            .line.is-easeOutSine
-        div.test-container__item
-          h3.test-container__title easeInOutSine
-          .box
-            .line.is-easeInOutSine
-        div.test-container__item
-          h3.test-container__title easeInQuad
-          .box
-            .line.is-easeInQuad
-        div.test-container__item
-          h3.test-container__title easeOutQuad
-          .box
-            .line.is-easeOutQuad
-        div.test-container__item
-          h3.test-container__title easeInOutQuad
-          .box
-            .line.is-easeInOutQuad
-        div.test-container__item
-          h3.test-container__title easeInCubic
-          .box
-            .line.is-easeInCubic
-        div.test-container__item
-          h3.test-container__title easeOutCubic
-          .box
-            .line.is-easeOutCubic
-        div.test-container__item
-          h3.test-container__title easeInOutCubic
-          .box
-            .line.is-easeInOutCubic
-        div.test-container__item
-          h3.test-container__title easeInQuart
-          .box
-            .line.is-easeInQuart
-        div.test-container__item
-          h3.test-container__title easeOutQuart
-          .box
-            .line.is-easeOutQuart
-        div.test-container__item
-          h3.test-container__title easeInOutQuart
-          .box
-            .line.is-easeInOutQuart
-        div.test-container__item
-          h3.test-container__title easeInQuint
-          .box
-            .line.is-easeInQuint
-        div.test-container__item
-          h3.test-container__title easeOutQuint
-          .box
-            .line.is-easeOutQuint
-        div.test-container__item
-          h3.test-container__title easeInOutQuint
-          .box
-            .line.is-easeInOutQuint
-        div.test-container__item
-          h3.test-container__title easeInExpo
-          .box
-            .line.is-easeInExpo
-        div.test-container__item
-          h3.test-container__title easeOutExpo
-          .box
-            .line.is-easeOutExpo
-        div.test-container__item
-          h3.test-container__title easeInOutExpo
-          .box
-            .line.is-easeInOutExpo
-        div.test-container__item
-          h3.test-container__title easeInCirc
-          .box
-            .line.is-easeInCirc
-        div.test-container__item
-          h3.test-container__title easeOutCirc
-          .box
-            .line.is-easeOutCirc
-        div.test-container__item
-          h3.test-container__title easeInOutCirc
-          .box
-            .line.is-easeInOutCirc
-        div.test-container__item
-          h3.test-container__title easeInBack
-          .box
-            .line.is-easeInBack
-        div.test-container__item
-          h3.test-container__title easeOutBack
-          .box
-            .line.is-easeOutBack
-        div.test-container__item
-          h3.test-container__title easeInOutBack
-          .box
-            .line.is-easeInOutBack
-    footer.footer
-      p
-        a(href="https://github.com/oti/easing-sass-function#license") MIT License.
-        a(href="https://github.com/oti") @oti
+    header.Header
+      .Header__inner
+        h1.Header__title Easing Sass Function
+
+    main.Main
+      svg.Space.-lg(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      h2.Desc Visual Sample
+
+      svg.Space.-sm(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      p.Text Animate on hover a rect.
+
+      svg.Space.-sm(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      form.Switcher
+        .Switcher__item
+          label(for="Duration").Switcher__label duration:
+          input.Switcher__input-text#Duration(type="number", name="duration", step="0.25", value="0.5")
+          span.Switcher__suffix s
+        .Switcher__item
+          input#Bulk(type="checkbox", name="bulk", value="1")
+          label(for="Bulk").Switcher__label bulk animation
+
+      svg.Space.-sm(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      .List
+        .List__item.is-easeInSine
+          span easeInSine
+        .List__item.is-easeOutSine
+          span easeOutSine
+        .List__item.is-easeInOutSine
+          span easeInOutSine
+        .List__item.is-easeInQuad
+          span easeInQuad
+        .List__item.is-easeOutQuad
+          span easeOutQuad
+        .List__item.is-easeInOutQuad
+          span easeInOutQuad
+        .List__item.is-easeInCubic
+          span easeInCubic
+        .List__item.is-easeOutCubic
+          span easeOutCubic
+        .List__item.is-easeInOutCubic
+          span easeInOutCubic
+        .List__item.is-easeInQuart
+          span easeInQuart
+        .List__item.is-easeOutQuart
+          span easeOutQuart
+        .List__item.is-easeInOutQuart
+          span easeInOutQuart
+        .List__item.is-easeInQuint
+          span easeInQuint
+        .List__item.is-easeOutQuint
+          span easeOutQuint
+        .List__item.is-easeInOutQuint
+          span easeInOutQuint
+        .List__item.is-easeInExpo
+          span easeInExpo
+        .List__item.is-easeOutExpo
+          span easeOutExpo
+        .List__item.is-easeInOutExpo
+          span easeInOutExpo
+        .List__item.is-easeInCirc
+          span easeInCirc
+        .List__item.is-easeOutCirc
+          span easeOutCirc
+        .List__item.is-easeInOutCirc
+          span easeInOutCirc
+        .List__item.is-easeInBack
+          span easeInBack
+        .List__item.is-easeOutBack
+          span easeOutBack
+        .List__item.is-easeInOutBack
+          span easeInOutBack
+
+      svg.Space.-md(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      h2.Desc Implementation
+
+      svg.Space.-sm(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      .Code
+        figure.Code__item
+          pre
+            code.
+              @use "sass:map";
+
+              $easing-map: (
+                easeInSine:     cubic-bezier(0.47, 0, 0.745, 0.715),
+                easeOutSine:    cubic-bezier(0.39, 0.575, 0.565, 1),
+                easeInOutSine:  cubic-bezier(0.445, 0.05, 0.55, 0.95),
+
+                easeInQuad:     cubic-bezier(0.55, 0.085, 0.68, 0.53),
+                easeOutQuad:    cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                easeInOutQuad:  cubic-bezier(0.455, 0.03, 0.515, 0.955),
+
+                easeInCubic:    cubic-bezier(0.55, 0.055, 0.675, 0.19),
+                easeOutCubic:   cubic-bezier(0.215, 0.61, 0.355, 1),
+                easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1),
+
+                easeInQuart:    cubic-bezier(0.895, 0.03, 0.685, 0.22),
+                easeOutQuart:   cubic-bezier(0.165, 0.84, 0.44, 1),
+                easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1),
+
+                easeInQuint:    cubic-bezier(0.755, 0.05, 0.855, 0.06),
+                easeOutQuint:   cubic-bezier(0.23, 1, 0.32, 1),
+                easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1),
+
+                easeInExpo:     cubic-bezier(0.95, 0.05, 0.795, 0.035),
+                easeOutExpo:    cubic-bezier(0.19, 1, 0.22, 1),
+                easeInOutExpo:  cubic-bezier(1, 0, 0, 1),
+
+                easeInCirc:     cubic-bezier(0.6, 0.04, 0.98, 0.335),
+                easeOutCirc:    cubic-bezier(0.075, 0.82, 0.165, 1),
+                easeInOutCirc:  cubic-bezier(0.785, 0.135, 0.15, 0.86),
+
+                easeInBack:     cubic-bezier(0.6, -0.28, 0.735, 0.045),
+                easeOutBack:    cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                easeInOutBack:  cubic-bezier(0.68, -0.55, 0.265, 1.55)
+              );
+
+              @function easing($name) {
+                @return map.get($easing-map, $name);
+              }
+
+      svg.Space.-md(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      h2.Heading Usage
+
+      svg.Space.-sm(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      h3.Subheading from git
+
+      svg.Space.-sm(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      p.Text 1) git clone and move to your project.
+
+      svg.Space.-sm(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      figure.Code
+        pre.Code__item
+          code.
+            git clone git@github.com:oti/easing-sass-function.git
+            mv easing-sass-function/src/_easing-sass-function.scss your/project/scss/path
+
+      svg.Space.-sm(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      p.Text 2) @use in your .scss file.
+
+      svg.Space.-sm(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      figure.Code
+        pre.Code__item
+          code.
+            @use 'your/project/scss/path/easing-sass-function' as *;
+
+      svg.Space.-md(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      h3.Subheading from npm
+
+      svg.Space.-sm(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      p.Text 1) npm install.
+
+      svg.Space.-sm(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      figure.Code
+        pre.Code__item
+          code.
+            npm i easing-sass-function
+
+      svg.Space.-sm(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      p.Text 2) @use in your .scss file.
+
+      svg.Space.-sm(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      figure.Code
+        pre.Code__item
+          code.
+            @use '../(to project root)/node_modules/easing-sass-function';
+
+      svg.Space.-md(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      h3.Subheading write function
+
+      svg.Space.-sm(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      p.Text 3) write easing() sass function.
+
+      svg.Space.-sm(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      figure.Code
+        pre.Code__item
+          code.
+            .elem {
+              transition-timing-function: easing(easeInSine);
+            }
+
+      svg.Space.-lg(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+      svg.Space.-lg(viewBox="0 0 1 1", aria-hidden="true")
+        rect(width="1", height="1", fill="none")
+
+    footer#footer.Footer
+      .Footer__inner
+        p.Footer__credit Code by
+          a(href="https://github.com/oti", target="_blank", rel="noopener") oti
+          | . Inspired by
+          |
+          a(
+            href="https://easings.net/",
+            target="_blank",
+            rel="noopener"
+          ) easings.net
+
+        p.Footer__license
+          a(href="https://github.com/oti/easing-sass-function/") GitHub
+          | , MIT License

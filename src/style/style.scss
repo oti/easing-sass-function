@@ -1,0 +1,21 @@
+@charset 'UTF-8';
+
+@forward "foundation/base";
+
+// レイアウト
+@forward "layout/Header";
+@forward "layout/Footer";
+@forward "layout/Main";
+
+// コンポーネント
+@forward "object/component/Code";
+@forward "object/component/Desc";
+@forward "object/component/Heading";
+@forward "object/component/List";
+@forward "object/component/Space";
+@forward "object/component/Subheading";
+@forward "object/component/Switcher";
+@forward "object/component/Text";
+
+// ユーティリティー
+@forward "object/utility/VisuallyHidden";

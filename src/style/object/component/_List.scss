@@ -1,0 +1,121 @@
+@use "../../../easing-sass-function" as *;
+
+.List {
+  @at-root {
+    & {
+      display: grid;
+      gap: 15px;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    }
+
+    &:hover .List__item::after {
+      transform: scaleX(1);
+    }
+
+    .List__item {
+      position: relative;
+      height: 3rem;
+      background-color: var(--colorPrimaryLight);
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: var(--colorTertiaryDark);
+        transform-origin: 0 0;
+        transform: scaleX(0);
+        transition-property: transform;
+        transition-duration: 0.75s;
+      }
+
+      &.is-easeInSine::after {
+        transition-timing-function: easing(easeInSine);
+      }
+      &.is-easeOutSine::after {
+        transition-timing-function: easing(easeOutSine);
+      }
+      &.is-easeInOutSine::after {
+        transition-timing-function: easing(easeInOutSine);
+      }
+      &.is-easeInQuad::after {
+        transition-timing-function: easing(easeInQuad);
+      }
+      &.is-easeOutQuad::after {
+        transition-timing-function: easing(easeOutQuad);
+      }
+      &.is-easeInOutQuad::after {
+        transition-timing-function: easing(easeInOutQuad);
+      }
+      &.is-easeInCubic::after {
+        transition-timing-function: easing(easeInCubic);
+      }
+      &.is-easeOutCubic::after {
+        transition-timing-function: easing(easeOutCubic);
+      }
+      &.is-easeInOutCubic::after {
+        transition-timing-function: easing(easeInOutCubic);
+      }
+      &.is-easeInQuart::after {
+        transition-timing-function: easing(easeInQuart);
+      }
+      &.is-easeOutQuart::after {
+        transition-timing-function: easing(easeOutQuart);
+      }
+      &.is-easeInOutQuart::after {
+        transition-timing-function: easing(easeInOutQuart);
+      }
+      &.is-easeInQuint::after {
+        transition-timing-function: easing(easeInQuint);
+      }
+      &.is-easeOutQuint::after {
+        transition-timing-function: easing(easeOutQuint);
+      }
+      &.is-easeInOutQuint::after {
+        transition-timing-function: easing(easeInOutQuint);
+      }
+      &.is-easeInExpo::after {
+        transition-timing-function: easing(easeInExpo);
+      }
+      &.is-easeOutExpo::after {
+        transition-timing-function: easing(easeOutExpo);
+      }
+      &.is-easeInOutExpo::after {
+        transition-timing-function: easing(easeInOutExpo);
+      }
+      &.is-easeInCirc::after {
+        transition-timing-function: easing(easeInCirc);
+      }
+      &.is-easeOutCirc::after {
+        transition-timing-function: easing(easeOutCirc);
+      }
+      &.is-easeInOutCirc::after {
+        transition-timing-function: easing(easeInOutCirc);
+      }
+      &.is-easeInBack::after {
+        transition-timing-function: easing(easeInBack);
+      }
+      &.is-easeOutBack::after {
+        transition-timing-function: easing(easeOutBack);
+      }
+      &.is-easeInOutBack::after {
+        transition-timing-function: easing(easeInOutBack);
+      }
+
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+      }
+    }
+  }
+}

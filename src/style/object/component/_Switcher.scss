@@ -1,0 +1,22 @@
+.Switcher {
+  @at-root {
+    & {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: calc(var(--spaceGap) / 2);
+    }
+
+    .Switcher__item {
+      display: flex;
+      align-items: center;
+      gap: calc(var(--spaceGap) / 5);
+    }
+
+    .Switcher__input-text {
+      width: 3.5rem;
+      height: 2rem;
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.Code {
+  @at-root {
+    & {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spaceGap);
+      color: var(--colorSecondaryDark);
+      overflow-x: auto;
+    }
+
+    .Code__item {
+      flex-grow: 1;
+      flex-basis: calc((var(--switcherThreshold) - 100%) * 999);
+      box-sizing: border-box;
+      padding: var(--spaceGap);
+      border-radius: 4px;
+      background-color: var(--colorSecondaryLight);
+    }
+  }
+}
