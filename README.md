@@ -1,33 +1,58 @@
 
 # Easing Sass Function
 
-For using [easings.net](http://easings.net/) with Sass function.
+https://easing-sass-function.dskd.jp
 
-## Overview
+Inspired by [easing.net](https://easing.net).
 
-cubic-bezier collection with data-map and sass-function.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/01ab9f61-7c5a-4d85-a34e-2f9c4cae11bb/deploy-status)](https://app.netlify.com/sites/easing-sass-function/deploys)
 
-```Sass
-// _easing-var.scss
-$ease-map: (
+- **v2.x is compatible to dart-sass**
+- [v1.x](https://github.com/oti/easing-sass-function/releases/tag/v1.2.0) is compatible to libsass(node-sass).
+
+## You can get custom easing sass function
+
+```sass
+@use "sass:map";
+
+$easing-map: (
   easeInSine:     cubic-bezier(0.47, 0, 0.745, 0.715),
   easeOutSine:    cubic-bezier(0.39, 0.575, 0.565, 1),
   easeInOutSine:  cubic-bezier(0.445, 0.05, 0.55, 0.95),
-  ...
-  ...
-);
-```
 
-```Sass
-// _easing-var.scss
-@function ease($name) {
-  @return map-get($ease-map, $name);
+  easeInQuad:     cubic-bezier(0.55, 0.085, 0.68, 0.53),
+  easeOutQuad:    cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  easeInOutQuad:  cubic-bezier(0.455, 0.03, 0.515, 0.955),
+
+  easeInCubic:    cubic-bezier(0.55, 0.055, 0.675, 0.19),
+  easeOutCubic:   cubic-bezier(0.215, 0.61, 0.355, 1),
+  easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1),
+
+  easeInQuart:    cubic-bezier(0.895, 0.03, 0.685, 0.22),
+  easeOutQuart:   cubic-bezier(0.165, 0.84, 0.44, 1),
+  easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1),
+
+  easeInQuint:    cubic-bezier(0.755, 0.05, 0.855, 0.06),
+  easeOutQuint:   cubic-bezier(0.23, 1, 0.32, 1),
+  easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1),
+
+  easeInExpo:     cubic-bezier(0.95, 0.05, 0.795, 0.035),
+  easeOutExpo:    cubic-bezier(0.19, 1, 0.22, 1),
+  easeInOutExpo:  cubic-bezier(1, 0, 0, 1),
+
+  easeInCirc:     cubic-bezier(0.6, 0.04, 0.98, 0.335),
+  easeOutCirc:    cubic-bezier(0.075, 0.82, 0.165, 1),
+  easeInOutCirc:  cubic-bezier(0.785, 0.135, 0.15, 0.86),
+
+  easeInBack:     cubic-bezier(0.6, -0.28, 0.735, 0.045),
+  easeOutBack:    cubic-bezier(0.175, 0.885, 0.32, 1.275),
+  easeInOutBack:  cubic-bezier(0.68, -0.55, 0.265, 1.55)
+);
+
+@function easing($name) {
+  @return map.get($easing-map, $name);
 }
 ```
-
-## Visual Sample
-
-https://oti.github.io/easing-sass-function/test/
 
 ## Usage
 
@@ -37,27 +62,13 @@ https://oti.github.io/easing-sass-function/test/
 
 ```shell
 git clone git@github.com:oti/easing-sass-function.git
-mv easing-sass-function/src/_easing-var.scss <your project>/<scss dirctory>
-mv easing-sass-function/src/_easing-function.scss <your project>/<scss dirctory>
+mv easing-sass-function/src/_easing-sass-function.scss your/project/scss/path
 ```
 
-2. `@import` in your .scss file.
+2. @use in your .scss file.
 
-```Sass
-// Example
-@import '<your scss partial file directory>/easing-var';
-@import '<your scss partial file directory>/easing-function';
-```
-
-3. write `ease()` sass function and argument in value of transition-timing-function.
-
-```Sass
-// Example
-.line {
-  transiton-property: transform;
-  transiton-duration: 0.125s
-  transiton-timing-function: ease(easeInOutBack)
-}
+```sass
+@use 'your/project/scss/path/easing-sass-function' as *;
 ```
 
 ### from npm
@@ -68,22 +79,17 @@ mv easing-sass-function/src/_easing-function.scss <your project>/<scss dirctory>
 npm i easing-sass-function
 ```
 
-2. `@import` in your .scss file.
+2. `@use` in your .scss file.
 
-```Sass
-// Example
-@import '../(to project root)/node_modules/easing-sass-function/src/easing-var';
-@import '../(to project root)/node_modules/easing-sass-function/src/easing-function';
+```sass
+@use '../(to project root)/node_modules/easing-sass-function';
 ```
 
-3. write `ease()` sass function and argument in value of transition-timing-function.
+1. write `easing()` sass function.
 
-```Sass
-// Example
-.line {
-  transiton-property: transform;
-  transiton-duration: 0.125s
-  transiton-timing-function: ease(easeInOutBack)
+```sass
+.elem {
+  transition-timing-function: easing(easeInSine);
 }
 ```
 
