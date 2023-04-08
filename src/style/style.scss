@@ -9,12 +9,12 @@
 
 // コンポーネント
 @forward "object/component/Code";
+@forward "object/component/Controller";
 @forward "object/component/Desc";
 @forward "object/component/Heading";
 @forward "object/component/List";
 @forward "object/component/Space";
 @forward "object/component/Subheading";
-@forward "object/component/Switcher";
 @forward "object/component/Text";
 
 // ユーティリティー

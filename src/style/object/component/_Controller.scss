@@ -1,22 +1,26 @@
-.Switcher {
+.Controller {
   @at-root {
     & {
       display: flex;
-      flex-direction: column;
       flex-wrap: wrap;
       gap: calc(var(--spaceGap) / 2);
     }
 
-    .Switcher__item {
+    .Controller__item {
       display: flex;
       align-items: center;
       gap: calc(var(--spaceGap) / 5);
     }
 
-    .Switcher__input-text {
+    .Controller__input-text {
       width: 3.5rem;
-      height: 2rem;
+      height: 1.5rem;
       text-align: right;
+    }
+
+    .Controller__button {
+      padding-inline: 0.5rem;
+      line-height: 1.5;
     }
   }
 }
