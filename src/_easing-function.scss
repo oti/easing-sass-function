@@ -1,3 +1,6 @@
-@function ease($name) {
-  @return map-get($ease-map, $name);
+@use "sass:map";
+@use "./easing-map" as *;
+
+@function easing($name) {
+  @return map.get($easing, $name);
 }
