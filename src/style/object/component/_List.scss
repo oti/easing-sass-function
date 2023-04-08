@@ -8,11 +8,12 @@
       grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     }
 
-    &:hover .List__item::after {
+    &.is-bulk:hover .List__item::after {
       transform: scaleX(1);
     }
 
     .List__item {
+      list-style: none inside;
       position: relative;
       height: 3rem;
       background-color: var(--colorPrimaryLight);
@@ -30,6 +31,10 @@
         transform: scaleX(0);
         transition-property: transform;
         transition-duration: 0.75s;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
       }
 
       &.is-easeInSine::after {
