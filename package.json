@@ -7,10 +7,17 @@
     "src/_easing-function.scss"
   ],
   "devDependencies": {
-    "sass": "^1.61.0"
+    "@parcel/transformer-pug": "^2.8.3",
+    "@parcel/transformer-sass": "^2.8.3",
+    "autoprefixer": "^10.4.14",
+    "husky": "^8.0.3",
+    "markuplint": "^3.6.1",
+    "parcel": "^2.8.3",
+    "sass": "^1.61.0",
+    "stylelint": "^15.4.0",
+    "stylelint-config-recommended": "^11.0.0"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oti/easing-sass-function.git"
