@@ -1,0 +1,125 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Easing Sass Function
+    link(rel="stylesheet", href="index.scss")
+  body
+    input#d1(hidden, type="radio", name="duration", checked)
+    input#d2(hidden, type="radio", name="duration")
+    input#d3(hidden, type="radio", name="duration")
+    header.header
+      h1 Easing Sass Function
+      a(href="https://github.com/oti/easing-sass-function") https://github.com/oti/easing-sass-function
+    main.main
+      h2 Visual Sample
+      .duration-select
+        em.duration-select__title You can change `transition-duration`
+        ul.duration-select__list(role="presentation")
+          li.duration-select__item(role="button")
+            label.duration-select__button(for="d1") 0.5s
+          li.duration-select__item(role="button")
+            label.duration-select__button(for="d2") 1s
+          li.duration-select__item(role="button")
+            label.duration-select__button(for="d3") 3s
+      .test-container
+        div.test-container__item
+          h3.test-container__title easeInSine
+          .box
+            .line.is-easeInSine
+        div.test-container__item
+          h3.test-container__title easeOutSine
+          .box
+            .line.is-easeOutSine
+        div.test-container__item
+          h3.test-container__title easeInOutSine
+          .box
+            .line.is-easeInOutSine
+        div.test-container__item
+          h3.test-container__title easeInQuad
+          .box
+            .line.is-easeInQuad
+        div.test-container__item
+          h3.test-container__title easeOutQuad
+          .box
+            .line.is-easeOutQuad
+        div.test-container__item
+          h3.test-container__title easeInOutQuad
+          .box
+            .line.is-easeInOutQuad
+        div.test-container__item
+          h3.test-container__title easeInCubic
+          .box
+            .line.is-easeInCubic
+        div.test-container__item
+          h3.test-container__title easeOutCubic
+          .box
+            .line.is-easeOutCubic
+        div.test-container__item
+          h3.test-container__title easeInOutCubic
+          .box
+            .line.is-easeInOutCubic
+        div.test-container__item
+          h3.test-container__title easeInQuart
+          .box
+            .line.is-easeInQuart
+        div.test-container__item
+          h3.test-container__title easeOutQuart
+          .box
+            .line.is-easeOutQuart
+        div.test-container__item
+          h3.test-container__title easeInOutQuart
+          .box
+            .line.is-easeInOutQuart
+        div.test-container__item
+          h3.test-container__title easeInQuint
+          .box
+            .line.is-easeInQuint
+        div.test-container__item
+          h3.test-container__title easeOutQuint
+          .box
+            .line.is-easeOutQuint
+        div.test-container__item
+          h3.test-container__title easeInOutQuint
+          .box
+            .line.is-easeInOutQuint
+        div.test-container__item
+          h3.test-container__title easeInExpo
+          .box
+            .line.is-easeInExpo
+        div.test-container__item
+          h3.test-container__title easeOutExpo
+          .box
+            .line.is-easeOutExpo
+        div.test-container__item
+          h3.test-container__title easeInOutExpo
+          .box
+            .line.is-easeInOutExpo
+        div.test-container__item
+          h3.test-container__title easeInCirc
+          .box
+            .line.is-easeInCirc
+        div.test-container__item
+          h3.test-container__title easeOutCirc
+          .box
+            .line.is-easeOutCirc
+        div.test-container__item
+          h3.test-container__title easeInOutCirc
+          .box
+            .line.is-easeInOutCirc
+        div.test-container__item
+          h3.test-container__title easeInBack
+          .box
+            .line.is-easeInBack
+        div.test-container__item
+          h3.test-container__title easeOutBack
+          .box
+            .line.is-easeOutBack
+        div.test-container__item
+          h3.test-container__title easeInOutBack
+          .box
+            .line.is-easeInOutBack
+    footer.footer
+      p
+        a(href="https://github.com/oti/easing-sass-function#license") MIT License.
+        a(href="https://github.com/oti") @oti
