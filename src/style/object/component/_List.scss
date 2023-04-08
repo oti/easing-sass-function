@@ -8,7 +8,7 @@
       grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     }
 
-    &.is-bulk:hover .List__item::after {
+    &.-bulk:hover .List__item::after {
       transform: scaleX(1);
     }
 
@@ -37,76 +37,76 @@
         transform: scaleX(1);
       }
 
-      &.is-easeInSine::after {
+      &.-easeInSine::after {
         transition-timing-function: easing(easeInSine);
       }
-      &.is-easeOutSine::after {
+      &.-easeOutSine::after {
         transition-timing-function: easing(easeOutSine);
       }
-      &.is-easeInOutSine::after {
+      &.-easeInOutSine::after {
         transition-timing-function: easing(easeInOutSine);
       }
-      &.is-easeInQuad::after {
+      &.-easeInQuad::after {
         transition-timing-function: easing(easeInQuad);
       }
-      &.is-easeOutQuad::after {
+      &.-easeOutQuad::after {
         transition-timing-function: easing(easeOutQuad);
       }
-      &.is-easeInOutQuad::after {
+      &.-easeInOutQuad::after {
         transition-timing-function: easing(easeInOutQuad);
       }
-      &.is-easeInCubic::after {
+      &.-easeInCubic::after {
         transition-timing-function: easing(easeInCubic);
       }
-      &.is-easeOutCubic::after {
+      &.-easeOutCubic::after {
         transition-timing-function: easing(easeOutCubic);
       }
-      &.is-easeInOutCubic::after {
+      &.-easeInOutCubic::after {
         transition-timing-function: easing(easeInOutCubic);
       }
-      &.is-easeInQuart::after {
+      &.-easeInQuart::after {
         transition-timing-function: easing(easeInQuart);
       }
-      &.is-easeOutQuart::after {
+      &.-easeOutQuart::after {
         transition-timing-function: easing(easeOutQuart);
       }
-      &.is-easeInOutQuart::after {
+      &.-easeInOutQuart::after {
         transition-timing-function: easing(easeInOutQuart);
       }
-      &.is-easeInQuint::after {
+      &.-easeInQuint::after {
         transition-timing-function: easing(easeInQuint);
       }
-      &.is-easeOutQuint::after {
+      &.-easeOutQuint::after {
         transition-timing-function: easing(easeOutQuint);
       }
-      &.is-easeInOutQuint::after {
+      &.-easeInOutQuint::after {
         transition-timing-function: easing(easeInOutQuint);
       }
-      &.is-easeInExpo::after {
+      &.-easeInExpo::after {
         transition-timing-function: easing(easeInExpo);
       }
-      &.is-easeOutExpo::after {
+      &.-easeOutExpo::after {
         transition-timing-function: easing(easeOutExpo);
       }
-      &.is-easeInOutExpo::after {
+      &.-easeInOutExpo::after {
         transition-timing-function: easing(easeInOutExpo);
       }
-      &.is-easeInCirc::after {
+      &.-easeInCirc::after {
         transition-timing-function: easing(easeInCirc);
       }
-      &.is-easeOutCirc::after {
+      &.-easeOutCirc::after {
         transition-timing-function: easing(easeOutCirc);
       }
-      &.is-easeInOutCirc::after {
+      &.-easeInOutCirc::after {
         transition-timing-function: easing(easeInOutCirc);
       }
-      &.is-easeInBack::after {
+      &.-easeInBack::after {
         transition-timing-function: easing(easeInBack);
       }
-      &.is-easeOutBack::after {
+      &.-easeOutBack::after {
         transition-timing-function: easing(easeOutBack);
       }
-      &.is-easeInOutBack::after {
+      &.-easeInOutBack::after {
         transition-timing-function: easing(easeInOutBack);
       }
 

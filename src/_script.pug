@@ -7,7 +7,7 @@ script.
     const root = document.querySelector(':root');
 
     Bulk.addEventListener("click", ({ target }) => {
-      List.classList.toggle('is-bulk', target.checked);
+      List.classList.toggle('-bulk', target.checked);
     }, false);
 
     Duration.addEventListener("input", ({ target }) => {
