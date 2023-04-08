@@ -17,7 +17,12 @@
     "stylelint": "^15.4.0",
     "stylelint-config-recommended": "^11.0.0"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "parcel build src/index.pug",
+    "prepare": "husky install",
+    "start": "parcel src/index.pug --open",
+    "test": "stylelint 'dist/*.css' && markuplint 'dist/*.html'"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oti/easing-sass-function.git"
