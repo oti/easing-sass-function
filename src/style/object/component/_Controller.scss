@@ -6,6 +6,10 @@
       gap: calc(var(--spaceGap) / 2);
     }
 
+    .-no-js & {
+      display: none;
+    }
+
     .Controller__item {
       display: flex;
       align-items: center;
