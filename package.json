@@ -2,12 +2,14 @@
   "name": "easing-sass-function",
   "version": "1.2.0",
   "description": "sass function of custom easing",
-  "main": "index.html",
+  "files": [
+    "_index.scss",
+    "src/_easing-function.scss"
+  ],
   "devDependencies": {
     "sass": "^1.61.0"
   },
   "scripts": {
-    "test": "sass src/test.scss test/test.css --watch"
   },
   "repository": {
     "type": "git",
