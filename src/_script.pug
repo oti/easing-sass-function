@@ -1,0 +1,16 @@
+script.
+  document.documentElement.classList.remove('-no-js');
+  document.addEventListener("DOMContentLoaded", () => {
+    const Bulk = document.querySelector("#Bulk");
+    const List = document.querySelector(".List");
+    const Duration = document.querySelector("#Duration");
+    const root = document.querySelector(':root');
+
+    Bulk.addEventListener("click", ({ target }) => {
+      List.classList.toggle('is-bulk', target.checked);
+    }, false);
+
+    Duration.addEventListener("input", ({ target }) => {
+      root.style.setProperty("--duration", `${target.value}ms`);
+    }, false);
+  });
